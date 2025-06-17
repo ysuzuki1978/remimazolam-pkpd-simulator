@@ -445,4 +445,4 @@ git remote set-url origin https://YOUR_TOKEN@github.com/ysuzuki1978/remimazolam-
 
 ---
 
-**🎉 このマニュアルで、安心してGitを使った開発ができるようになります！**
+**🎉 このマニュアルで、安心してGitを使った開発ができるようになります！**# Git設定更新完了
