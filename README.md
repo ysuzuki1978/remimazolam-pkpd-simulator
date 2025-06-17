@@ -37,7 +37,7 @@
 
 - R 4.0.0以上
 - 以下のRパッケージ:
-  \`\`\`r
+  ```r
   install.packages(c(
     "shiny",
     "shinydashboard", 
@@ -50,20 +50,20 @@
     "bslib",
     "deSolve"
   ))
-  \`\`\`
+  ```
 
 ### 実行方法
 
 1. リポジトリをクローン:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/ysuzuki1978/remimazolam-pkpd-simulator.git
    cd remimazolam-pkpd-simulator
-   \`\`\`
+   ```
 
 2. Rでアプリケーションを実行:
-   \`\`\`r
+   ```r
    shiny::runApp()
-   \`\`\`
+   ```
 
 3. ブラウザでアプリケーションが自動的に開きます
 
