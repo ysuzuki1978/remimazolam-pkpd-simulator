@@ -254,7 +254,7 @@ ui <- page_navbar(
   
   nav_item(
     tags$a(
-      href = "https://github.com/yasuyuki-suzuki/remimazolam-pkpd-simulator",
+      href = "https://github.com/ysuzuki1978/remimazolam-pkpd-simulator",
       target = "_blank",
       icon("github"),
       "GitHub"

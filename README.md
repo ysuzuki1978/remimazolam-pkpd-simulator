@@ -56,7 +56,7 @@
 
 1. リポジトリをクローン:
    \`\`\`bash
-   git clone https://github.com/yasuyuki-suzuki/remimazolam-pkpd-simulator.git
+   git clone https://github.com/ysuzuki1978/remimazolam-pkpd-simulator.git
    cd remimazolam-pkpd-simulator
    \`\`\`
 
