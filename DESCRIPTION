@@ -1,0 +1,30 @@
+Package: remimazolamPKPD
+Type: Package
+Title: Remimazolam Pharmacokinetic and Pharmacodynamic Calculator
+Version: 1.0.0
+Author: Yasuhiro Suzuki
+Maintainer: Yasuhiro Suzuki <y.suzuki@example.com>
+Description: Precise pharmacokinetic and pharmacodynamic calculations for remimazolam 
+    based on the Masui 2022 population pharmacokinetic model. Implements high-precision 
+    numerical integration using the 4th-order Runge-Kutta method for accurate simulation 
+    of drug concentrations in plasma and effect-site compartments.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    R6,
+    deSolve,
+    shiny (>= 1.7.0),
+    shinydashboard,
+    shinyWidgets,
+    DT,
+    plotly,
+    shinycssloaders,
+    shinyjs,
+    bslib (>= 0.4.0),
+    htmltools
+Suggests:
+    testthat,
+    knitr,
+    rmarkdown
+RoxygenNote: 7.2.3
