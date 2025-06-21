@@ -61,8 +61,8 @@
    ```
 
 2. Rでアプリケーションを実行:
-   ```r
-   shiny::runApp()
+   ```bash
+   Rscript launch_app.R
    ```
 
 3. ブラウザでアプリケーションが自動的に開きます
