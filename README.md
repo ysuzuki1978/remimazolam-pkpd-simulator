@@ -83,8 +83,9 @@
 
 本アプリケーションは以下の研究に基づいています：
 
-1 Masui, K., et al. (2022). A population pharmacokinetic model of remimazolam for general anesthesia and consideration of remimazolam dose in clinical practice. Journal of Anesthesia, 36(4), 493-505. doi:10.1007/s00540-022-03079-y
-1 Masui, K., & Hagihira, S. (2022). Equilibration rate constant, ke0, to determine effect-site concentration for the Masui remimazolam population pharmacokinetic model in general anesthesia patients. Journal of Anesthesia, 36(6), 733-742. doi:10.1007/s00540-022-03099-8
+- Masui, K., et al. (2022). A population pharmacokinetic model of remimazolam for general anesthesia and consideration of remimazolam dose in clinical practice. Journal of Anesthesia, 36(4), 493-505. doi:10.1007/s00540-022-03079-y
+
+- Masui, K., & Hagihira, S. (2022). Equilibration rate constant, ke0, to determine effect-site concentration for the Masui remimazolam population pharmacokinetic model in general anesthesia patients. Journal of Anesthesia, 36(6), 733-742. doi:10.1007/s00540-022-03099-8
 
 ## 👤 開発者
 
