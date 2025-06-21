@@ -215,9 +215,11 @@ PKCalculationEngineV3 <- R6::R6Class(
       times <- seq(from = start_time, to = simulation_duration_min, by = 1)
       
       # Calculate plasma concentrations using simplified 3-compartment model
-      plasma_concentrations <- self$calculate_plasma_concentrations(
+      plasma_result <- self$calculate_plasma_concentrations(
         patient, dose_events, times, pk_params
       )
+      plasma_concentrations <- plasma_result$concentrations
+      pk_params$infusion_plan <- plasma_result$infusion_plan
       
       # Calculate effect-site concentrations using different methods
       results <- list()
@@ -428,7 +430,10 @@ PKCalculationEngineV3 <- R6::R6Class(
       result_df <- as.data.frame(output)
       plasma_concentrations <- result_df$A1 / pk_params$V1
       
-      return(plasma_concentrations)
+      return(list(
+        concentrations = plasma_concentrations,
+        infusion_plan = infusion_events
+      ))
     }
   )
 )

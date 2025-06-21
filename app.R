@@ -11,7 +11,7 @@
 #' - CSV data export
 #'
 #' @author Yasuhiro Suzuki
-#' @version 3.0.0
+#' @version 3.3.0 - Fixed midnight crossing calculation bug
 
 # Load required libraries
 library(shiny)
@@ -200,8 +200,8 @@ ui <- page_navbar(
           
           h4("参考文献"),
           tags$ol(
-            tags$li("Masui, K., et al. (2022). Population pharmacokinetics and pharmacodynamics of remimazolam in Japanese patients. British Journal of Anaesthesia, 128(3), 423-433."),
-            tags$li("Masui, K., & Hagihira, S. (2022). Drug interaction model for propofol-remifentanil effect on bispectral index. Anesthesiology, 117(6), 1209-1218.")
+            tags$li("Masui, K., et al. (2022). A population pharmacokinetic model of remimazolam for general anesthesia and consideration of remimazolam dose in clinical practice. Journal of Anesthesia, 36(4), 493-505. doi:10.1007/s00540-022-03079-y"),
+            tags$li("Masui, K., & Hagihira, S. (2022). Equilibration rate constant, ke0, to determine effect-site concentration for the Masui remimazolam population pharmacokinetic model in general anesthesia patients. Journal of Anesthesia, 36(6), 733-742. doi:10.1007/s00540-022-03099-8")
           ),
           
           h4("免責事項"),
@@ -210,6 +210,14 @@ ui <- page_navbar(
             HTML("<strong>重要:</strong> 本アプリケーションは教育・研究目的のシミュレーションツールです。
                  実際の臨床判断には使用しないでください。すべての臨床判断は、
                  資格を持つ医療専門家の責任において行われるべきです。")
+          ),
+          
+          h4("既知の問題"),
+          div(
+            class = "alert alert-info",
+            HTML("<strong>日をまたぐ投与スケジュール:</strong> 麻酔開始時刻から24時間を超える投与スケジュールにおいて、
+                 グラフ表示で時刻軸の表示が正しくない場合があります。ただし、薬物濃度の予測計算は正常に実行されており、
+                 CSVデータ出力では正確な時刻と濃度値が記録されます。")
           ),
           
           h4("開発情報"),

@@ -123,16 +123,33 @@ Patient <- R6::R6Class(
     },
     
     #' @description Convert clock time to minutes from anesthesia start
-    #' @param clock_time POSIXct time
+    #' @param clock_time POSIXct time or character time in HH:MM format
     #' @return Numeric minutes from start
     clock_time_to_minutes = function(clock_time) {
       if (is.character(clock_time)) {
+        # Store original input time string
+        input_time_str <- clock_time
+        
         # Use the same date as anesthesia start time to ensure consistency
         # Extract date using format to avoid timezone issues
         anesthesia_date <- format(self$anesthesia_start_time, "%Y-%m-%d")
-        clock_time <- as.POSIXct(paste(anesthesia_date, clock_time), format = "%Y-%m-%d %H:%M")
+        parsed_time <- as.POSIXct(paste(anesthesia_date, input_time_str), format = "%Y-%m-%d %H:%M")
+        
+        # Calculate time difference
+        diff_mins <- as.numeric(difftime(parsed_time, self$anesthesia_start_time, units = "mins"))
+        
+        # If the result is negative (clock time is earlier than anesthesia start),
+        # assume it's the next day
+        if (diff_mins < 0) {
+          next_day <- as.Date(anesthesia_date) + 1
+          parsed_time <- as.POSIXct(paste(next_day, input_time_str), format = "%Y-%m-%d %H:%M")
+          diff_mins <- as.numeric(difftime(parsed_time, self$anesthesia_start_time, units = "mins"))
+        }
+        
+        return(diff_mins)
+      } else {
+        return(as.numeric(difftime(clock_time, self$anesthesia_start_time, units = "mins")))
       }
-      return(as.numeric(difftime(clock_time, self$anesthesia_start_time, units = "mins")))
     },
     
     #' @description Format anesthesia start time

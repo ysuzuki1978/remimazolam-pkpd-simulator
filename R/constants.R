@@ -8,7 +8,7 @@
 # Application Constants
 APP_CONSTANTS <- list(
   app_name = "RemimazolamPKPD",
-  version = "3.1.0",
+  version = "3.3.0",
   build_number = "1.0.0",
   copyright = "© 2025 医療教育用アプリケーション",
   
@@ -22,8 +22,8 @@ APP_CONSTANTS <- list(
   development_language = "R Shiny",
   
   # References
-  primary_reference = "Masui, K., et al. (2022). Population pharmacokinetics and pharmacodynamics of remimazolam in Japanese patients. British Journal of Anaesthesia, 128(3), 423-433.",
-  ke0_reference = "Masui, K., & Hagihira, S. (2022). Drug interaction model for propofol-remifentanil effect on bispectral index. Anesthesiology, 117(6), 1209-1218.",
+  primary_reference = "Masui, K., et al. (2022). A population pharmacokinetic model of remimazolam for general anesthesia and consideration of remimazolam dose in clinical practice. Journal of Anesthesia, 36(4), 493-505. doi:10.1007/s00540-022-03079-y",
+  ke0_reference = "Masui, K., & Hagihira, S. (2022). Equilibration rate constant, ke0, to determine effect-site concentration for the Masui remimazolam population pharmacokinetic model in general anesthesia patients. Journal of Anesthesia, 36(6), 733-742. doi:10.1007/s00540-022-03099-8",
   
   # Application Description
   app_description = "レミマゾラムの薬物動態・薬力学シミュレーター",
