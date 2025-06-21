@@ -14,7 +14,7 @@
 
 - **個別化薬物動態パラメータ**: 患者の年齢、体重、身長、性別、ASA分類に基づく個別計算
 - **複数計算手法**: V2標準（deSolve）とV3比較（4種類の手法）
-- **リアルタイム可視化**: インタラクティブなグラフによる濃度推移表示
+- **リアルタイム可視化**: インタラクティブなグラフによる濃度推移表示 (注：日をまたぐと一部変な表示をしますが、計算はしっかりできています。）
 - **柔軟な投与設定**: ボーラス投与と持続投与の組み合わせ対応
 - **データエクスポート**: CSV形式でのシミュレーション結果出力
 - **レスポンシブデザイン**: デスクトップ・タブレット・モバイル対応
@@ -83,8 +83,8 @@
 
 本アプリケーションは以下の研究に基づいています：
 
-1. Masui, K., et al. (2022). Population pharmacokinetics and pharmacodynamics of remimazolam in Japanese patients. *British Journal of Anaesthesia*, 128(3), 423-433.
-2. Masui, K., & Hagihira, S. (2022). Drug interaction model for propofol-remifentanil effect on bispectral index. *Anesthesiology*, 117(6), 1209-1218.
+1 Masui, K., et al. (2022). A population pharmacokinetic model of remimazolam for general anesthesia and consideration of remimazolam dose in clinical practice. Journal of Anesthesia, 36(4), 493-505. doi:10.1007/s00540-022-03079-y
+1 Masui, K., & Hagihira, S. (2022). Equilibration rate constant, ke0, to determine effect-site concentration for the Masui remimazolam population pharmacokinetic model in general anesthesia patients. Journal of Anesthesia, 36(6), 733-742. doi:10.1007/s00540-022-03099-8
 
 ## 👤 開発者
 
